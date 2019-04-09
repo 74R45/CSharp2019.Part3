@@ -1,0 +1,18 @@
+﻿<Window x:Class="KMA.ProgrammingInCSharp2019.Kreshchenko.Part3.Views.ThreadsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Threads" Height="400" Width="280">
+    <Grid>
+        <DataGrid ItemsSource="{Binding Threads, Mode=OneWay}" AutoGenerateColumns="False"
+                  CanUserResizeRows="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Thread ID" Binding="{Binding Item1}"></DataGridTextColumn>
+                <DataGridTextColumn Header="State" Binding="{Binding Item2}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Start time" Binding="{Binding Item3}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
